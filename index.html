@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos de Camisetas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Pedidos de Camisetas</h1>
+        
+        <section class="form-section">
+            <h2>Registrar Pedido</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="color">Cor da Camiseta:</label>
+                    <select id="color" required>
+                        <option value="">Selecione uma cor</option>
+                        <option value="Preta">Preta</option>
+                        <option value="Branca">Branca</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Vermelha">Vermelha</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Amarela">Amarela</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="size">Tamanho:</label>
+                    <select id="size" required>
+                        <option value="">Selecione um tamanho</option>
+                        <option value="P">P (Pequeno)</option>
+                        <option value="M">M (Médio)</option>
+                        <option value="G">G (Grande)</option>
+                        <option value="GG">GG (Extra Grande)</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Adicionar Pedido</button>
+            </form>
+        </section>
+        
+        <section class="orders-section">
+            <h2>Pedidos Registrados</h2>
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cor</th>
+                        <th>Tamanho</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-body">
+                    <!-- Os pedidos serão inseridos aqui via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="summary-section">
+            <h2>Resumo dos Pedidos</h2>
+            <div class="summary-cards" id="summary-cards">
+                <!-- O resumo será inserido aqui via JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
